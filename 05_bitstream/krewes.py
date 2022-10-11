@@ -1,21 +1,22 @@
 '''
+Team AA: Anna Fang and Aden Garbutt
+SoftDev
+05_bitstream
+2022-09-30
+time spent: 
 DISCO:
- - Python has a .keys() function to get a list of keys from a dictionary
- - random.randint is inclusive on BOTH endpoints
- - .keys() returns a dict_keys object, which is not subscriptable (can't get element by index)
-    - dict_keys can be type-cast into a list with "list(dict_keys)"
+- how to check keys in a dictionary
+- how to read in and split a string based on a given element
 
 QCC:
- - Usually ranges are exclusive at the end, why is randint inclusive?
 
 OPS SUMMARY:
- - Input: krewes = {dict(int : list)}
- - Operation:
-    1) Get list of keys in krewes
-    2) Generate a random index from 0 to len(keys)
-    3) Get the value (list of devos) associated with the key at the random index
-    4) Generate another random index, this time from 0 to len(value)
-    5) Return the devo at the random index
+- read the file (krewes.txt) and insert the data into a method (create_dict)
+- split the info and get all of the keys
+    * only add the unique keys into a list
+    * add all unique keys to the dictionary
+- split the info to find names and duckies
+    * append these into the dictionary and print !
 '''
 
 file = open('krewes.txt')
@@ -27,18 +28,21 @@ krewes = {}
 
 def create_dict(str):
     strs = str.split('@@@')
-    print(strs)
     strs = strs[:-1]
-    
+    keyList = []
+    for x in strs:
+        values = x.split('$$$')
+        key = int(values[0])
+        if(key not in keyList):
+            keyList.append(key)            
+    for x in keyList:
+        krewes[x] = []
     for x in strs:
         values = x.split('$$$')
         key = int(values[0])
         name = values[1]
         ducky = values[2]
-        
-        krewes[key].append(name)
-        krewes[key].append(ducky)
-        
-
-create_dict(contents)
+        krewes[key].append([name, ducky])
+    
+create_dict(contents) 
 print(krewes)
