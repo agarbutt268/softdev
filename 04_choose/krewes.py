@@ -1,4 +1,11 @@
 '''
+TNPG: CertifiedCoderBoys
+Roster: Aden Garbutt, Emerson Gelobter, Karen
+SoftDev
+K04
+2022-10-06
+time spent: 0.5
+
 DISCO:
  - Python has a .keys() function to get a list of keys from a dictionary
  - random.randint is inclusive on BOTH endpoints

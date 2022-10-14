@@ -1,6 +1,10 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2022
+'''
+Team Whole Lotta Coding: Prattay Dey, Emerson Gelobter, Aden Garbutt
+SoftDev
+K09 -- static
+2022-10-11
+time spent: 0.5 hr
+'''
 
 # DEMO 
 # basics of /static folder
