@@ -1,5 +1,5 @@
 '''
-Team Whole Lotta Coding: Prattay Dey, Emerson Gelobter, Aden Garbutt
+Team Whole Lotta Coding: Aden Garbutt, Prattay Dey, Emerson Gelobter,
 SoftDev
 K11 -- flask-forms
 2022-10-14
