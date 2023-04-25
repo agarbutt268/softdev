@@ -26,29 +26,37 @@ var toggleMode = (e) => {
     }
 }
 
+
 var drawRect = function(e) {
-  var mouseX = MouseEvent.clientX;
-  var mouseY = MouseEvent.clientY;
-  console.log("mouseclick registered at ", mouseX, mouseY);
+  var mouseX = e.clientX;
+  var mouseY = e.clientY;
+  ctx.fillRect(mouseX - 7, mouseY - 128, 25, 25)
+  console.log(`(${mouseX}, ${mouseY})`);
 }
 
+
 var drawCircle = (e) => {
-  var mouseX = `${e.clientX}`
-  var mouseY = `${e.clientY}`
-  console.log("mouseclick registered at ", mouseX, mouseY);
+  var mouseX = e.clientX
+  var mouseY = e.clientY
+  ctx.beginPath();
+  ctx.arc(mouseX - 7, mouseY - 128, 10, 0, 2 * Math.PI, true);
+  ctx.fill();
+  console.log(`(${mouseX}, ${mouseY})`);
 }
+
 
 var draw = (e) => {
   if (mode == "rect") {
-    drawRect();
+    drawRect(e);
   }
   else {
-    drawCircle();
+    drawCircle(e);
   }
 }
 
-var wipeCanvas = () => {
 
+var wipeCanvas = () => {
+  ctx.clearRect(0, 0, 600, 600)
 }
 
 c.addEventListener("click", draw);

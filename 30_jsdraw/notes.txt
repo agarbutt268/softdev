@@ -2,3 +2,5 @@ Team GASLIGHTING GATEKEEPING GIRLBOSSES :: Kevin Xiao + Aden Garbutt
 SoftDev pd7
 K30 -- canvas based JS drawing
 2023-04-24m
+
+- for some reason the mouse coordinates were off (7 in the x direction, 128 in the y)
